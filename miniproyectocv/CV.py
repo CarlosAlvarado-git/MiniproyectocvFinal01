@@ -1,10 +1,10 @@
 from flask import Flask, url_for
 from jinja2 import Template, Environment, FileSystemLoader
 import yaml
-file_loader = FileSystemLoader('templates')
+file_loader = FileSystemLoader('miniproyectocv\\templates')
 env = Environment(loader=file_loader)
 app = Flask(__name__)
-with open("MICV.yaml") as yaml_file:
+with open("miniproyectocv/MICV.yaml") as yaml_file:
     miyaml = yaml.load(yaml_file)
 @app.route('/CV')
 def CV():
@@ -17,4 +17,4 @@ def Linker():
     return template.render(my_data=miyaml, links=miyaml['Redes_Sociales'])
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5000)
+    app.run()

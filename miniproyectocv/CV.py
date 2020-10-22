@@ -4,7 +4,7 @@ import yaml
 file_loader = FileSystemLoader('templates')
 env = Environment(loader=file_loader)
 app = Flask(__name__)
-with open("miniproyectocv/MICV.yaml") as yaml_file:
+with open("MICV.yaml") as yaml_file:
     miyaml = yaml.load(yaml_file)
 @app.route('/CV')
 def CV():

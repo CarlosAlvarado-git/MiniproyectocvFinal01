@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block title %}Linktree{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block resto %}
+<body>
+  <header>
+    <style>
+      body{
+        background-image: url(/static/linktree.HEIC);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: 0% 40%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+      }
+    </style>
+  </header>
+  <br>
+  <br>
+  <div class="links" class="center">
+
+    {% for name, link in links.items()%}
+    <div class="links__item">
+      <a class="links__item" href="{{link}}" target=" _blank"><h1>{{name}}</h1></a>
+    </div>
+    {% endfor %}
+  </div>
+</body>
+  
+{% endblock %}
+{% block body %}
+  {{ super() }}
+  
+{% endblock %}

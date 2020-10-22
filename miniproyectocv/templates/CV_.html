@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+{% block title %}{{my_data['informacion_pagina']['titulo']}}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block resto %}
+  <body class="background">
+    <div>
+        <img src="{{foto_mia}}">
+    </div>
+      <div class="container">
+        <h2>Nombre: {{my_data['informacion_personal']['nombre_completo']}}</h2>
+        <p><strong>País de nacimiento: </strong>{{my_data['informacion_personal']['pais_de_nacimiento']}}.</p>
+        <strong>Idiomas:</strong>
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+            {% for item in my_data['informacion_personal']['idiomas']%}
+              <li class="list-group-item">{{item}}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        <strong>Edad: </strong> {{my_data['informacion_personal']['edad']}}<br>
+        <strong>Experiencia: </strong> {{my_data['informacion_personal']['experiencia']}}<br>
+        <strong>Intereses: </strong> 
+        <ul>
+            {% for item in my_data['informacion_personal']['intereses']%}
+            <li>{{item}}</li>
+            {% endfor %}
+        </ul>
+            
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                Acerca de mi:
+              </a>
+            </div>
+            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+              <div class="card-body">
+                  {{my_data['informacion_personal']['acerca_de_mi']}}
+             </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+              Informacion profesional: 
+            </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                  <strong>Tecnologías: </strong>
+                <ul>
+                    {% for item in my_data['informacion_profesional']['tecnologias']%}
+                    <li>{{item}}</li>
+                    {% endfor %}
+                </ul>
+                <strong>Educación: </strong>
+                <ul>
+                    <li>{{my_data['informacion_profesional']['educacion']}}</li>
+                </ul>
+               </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                  Referencias: 
+              </a>
+            </div>
+            <div id="collapseThree" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <strong>Referencias Laborales: </strong>
+                 <ul>
+                    {% for item in my_data['informacion_referencias']['referencias_laborales']%}
+                    <li>{{item}}</li>
+                    {% endfor %}
+                </ul>
+                <strong>Referencia personal: </strong>
+               <ul>
+                    {% for item in my_data['informacion_referencias']['referencia_personal']%}
+                    <li>{{item}}</li>
+                    {% endfor %}
+                </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+  {% endblock %}
+{% block body %}
+  {{ super() }} 
+{% endblock %}
+
+    

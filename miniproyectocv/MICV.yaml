@@ -1,0 +1,38 @@
+fotografia: perfil.png
+informacion_pagina:
+    autor: Carlos Manuel Alvarado Andrade
+    titulo: Mi CV 2020
+informacion_personal:
+    nombre_completo: Carlos Manuel Alvarado Andrade
+    pais_de_nacimiento: Guatemala
+    idiomas:
+        - Español
+        - Ingles
+    edad: 19
+    acerca_de_mi: Soy un chico deportista, alegre y muy independiente. Me encanta la programación y resolver problemas con ella. Ya que me gusta ayudar a los demás y me interesa mucho las nuevas tecnologías que van saliendo al mercado. Me gusta ayudar a los demás y el trabajo en grupo me ha ayudado mucho a escuchar y apoyarme en las demás personas.
+    experiencia: Software Engineer
+    intereses:
+        - Programación de sistemas operativos
+        - Manejo de bases de datos
+        - Creación de aplicaciones
+        - Páginas Web universitarias
+informacion_profesional:
+    tecnologias: 
+        - Python
+        - Java
+        - C#
+        - C
+    educacion: Universidad Francisco Marroquín
+informacion_referencias:
+    referencias_laborales: 
+        - Universidad Fransisco Marroquín Departamento de Tecnología
+    referencia_personal: 
+        - Kevin Brolo, profesor de programación del Colegio Suizo Americano
+        - Edwin Echeverría, profesor de programación del Colegio Suizo Americano
+        - Evelyn FLores, profesora de Ciencias Sociales del Colegio Suizo Americano
+        - Yosef, ingenero en sistemas de la Universidad Francisco Marroquín
+Redes_Sociales:
+    Facebook: https://www.facebook.com/carlosmanuel.alvarado.50
+    Instagram: https://www.instagram.com/invites/contact/?i=cvevbg0ewq0a&utm_content=ov6uo7
+    Twitter: https://twitter.com/Carlos_0100Alva
+    Spotify: https://open.spotify.com/user/52cn4byya6zbgeq5o5riw3wk3?si=9V7FSa9cQlWf6-vMJ-RZBQ

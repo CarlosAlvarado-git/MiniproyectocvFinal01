@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <style>
+            img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 250px;
+            display:block;
+            margin:auto;
+        }
+        .logo{
+                    width: 300px;
+                }
+        .links__item{
+            display: block;
+            max-width: 550px;
+            margin: 0 auto 15px;
+            margin-bottom: 5px;
+            padding: 15px 20px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            text-decoration: rgb(255, 255, 255);
+            transition: all 0.2s ease-in-out;
+            color: rgb(223, 129, 129);
+            font-family: "Sofia";
+            font-size: 22px;
+            border-bottom: 3px solid #ff1e00;
+            box-shadow: inset 0 -4px 0 #000000;
+            border-radius: 25px;
+            border: 2px solid #ff1e00;
+        }
+        .background {background-color: skyblue;}
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>{% block title %}{% endblock %} - Layout</title>
+    {% endblock %}
+  </head>
+  {% block body %}
+  <body>
+      <nav class="navbar navbar-expand-sm bg-light">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/CV">Mi CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">Linktree</a>
+          </li>
+        </ul>
+      </nav>
+      {% block resto %}{% endblock %}
+  </body>
+  {% endblock %}
+</html>

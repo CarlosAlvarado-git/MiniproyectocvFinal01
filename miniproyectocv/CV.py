@@ -4,7 +4,7 @@ import yaml
 file_loader = FileSystemLoader('templates')
 env = Environment(loader=file_loader)
 app = Flask(__name__)
-with open("MICV.yaml") as yaml_file:
+with open("miniproyectocv/MICV.yaml") as yaml_file:
     miyaml = yaml.load(yaml_file)
 @app.route('/CV')
 def CV():
@@ -17,4 +17,4 @@ def Linker():
     return template.render(my_data=miyaml, links=miyaml['Redes_Sociales'])
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0',port=5000)

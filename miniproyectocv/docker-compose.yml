@@ -3,8 +3,8 @@ version: "3.8"
 
 services:
   myapp:
-    image: carlosalvaradodock/miniproyectocv
+    image: carlosalvaradodock/micv
     build:
-      context: .
+      context: 
     ports:
       - 5000:5000
